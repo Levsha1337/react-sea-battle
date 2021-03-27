@@ -1,0 +1,49 @@
+#game {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    #texts {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+        font-family: Arial, Helvetica, sans-serif;
+
+        div {
+            color: white;
+            font-size: 4vmin;
+        }
+
+        button {
+            font-size: 4vmin;
+            height: 6vmin;
+            margin: 0.5vmin;
+            padding: 0.5vmin;
+            border: none;
+        }
+    }
+
+    .row {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        
+        .cell {
+            width: 8vmin;
+            height: 8vmin;
+            // margin: 0.5vmin;
+            // padding: 0.5vmin;
+            // border: solid 2px black;
+            // border-radius: 0.5vmin;
+
+            background-color: darkgrey;
+
+            background-position: center;
+            background-size: contain;
+        }
+    }
+}
