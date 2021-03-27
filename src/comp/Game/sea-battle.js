@@ -57,7 +57,7 @@ export default class SeaBattle {
         };
     }
 
-    fillGameField() {
+    restart() {
         this.clearGameField();
 
         SHIPS.map(shipType => {

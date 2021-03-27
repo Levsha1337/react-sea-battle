@@ -6,12 +6,14 @@ import SpriteMiss from '../../res/sprite_miss.png';
 import SpriteCell from '../../res/sprite_cell.png';
 import SpriteHit from '../../res/sprite_hit.png';
 import SpriteKill from '../../res/sprite_kill.png';
+import SpriteAuto from '../../res/sprite_auto.png';
 
 const styles = [
     { backgroundImage: `url(${SpriteCell})` },
     { backgroundImage: `url(${SpriteMiss})` },
     { backgroundImage: `url(${SpriteHit })` },
-    { backgroundImage: `url(${SpriteKill})` }
+    { backgroundImage: `url(${SpriteKill})` },
+    { backgroundImage: `url(${SpriteAuto})` }
 ];
 
 export default class Game extends Component {
@@ -32,7 +34,7 @@ export default class Game extends Component {
     }
 
     restart() {
-        this.seaBattle.fillGameField();
+        this.seaBattle.restart();
         this.setState({
             gameField: [...Array(10)].map(() => Array(10).fill(-1)),
             shots: 0,
@@ -77,7 +79,7 @@ export default class Game extends Component {
             // filling ships-free area
             for (let y = fromTo.fromY; y <= fromTo.toY; y++) {
                 for (let x = fromTo.fromX; x <= fromTo.toX; x++) {
-                    if (newField[y][x] === -1) newField[y][x] = 0;
+                    if (newField[y][x] === -1) newField[y][x] = 3;
                 }
             }
         } else { // else we have hit or miss
