@@ -1,21 +1,8 @@
 const SHIPS = [
-    {
-        decks: 4,
-        count: 1
-    }
-    ,
-    {
-        decks: 3,
-        count: 2
-    },
-    {
-        decks: 2,
-        count: 3
-    },
-    {
-        decks: 1,
-        count: 4
-    }
+    { decks: 4, count: 1 },
+    { decks: 3, count: 2 },
+    { decks: 2, count: 3 },
+    { decks: 1, count: 4 }
 ];
 
 class Cell {

@@ -51,7 +51,7 @@ export default class Game extends Component {
         // if we have zero ships alive user cant open more cells
         if (left === 0) return;
 
-        // unlink array elements from state
+        // unlink array elements from state to save immutability
         let newField = [...this.state.gameField];
         newField[eventY] = [...newField[eventY]];
 
